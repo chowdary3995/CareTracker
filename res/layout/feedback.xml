@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/feedbackLinearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/content0"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingTop="30dp"
+        android:text="Enter feedback details to send to the developer"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/EditTextName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your Name"
+        android:inputType="textPersonName" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/EditTextEmail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your Email"
+        android:inputType="textEmailAddress" >
+    </EditText>
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suggestion" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bug" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Comment" />
+    </RadioGroup>
+    
+     <EditText
+        android:id="@+id/EditTextMessage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your Message"
+        android:inputType="textMultiLine" >
+    </EditText>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="sendFeedback"
+        android:layout_marginTop="10dp"
+        android:text="Submit Feedback"
+        android:textStyle="bold" />
+
+</LinearLayout>

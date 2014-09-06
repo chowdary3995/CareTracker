@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="umkc.ase.caretracker"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <permission
+        android:name="umkc.ase.caretracker.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="umkc.ase.caretracker.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--
+     The following two permissions are not required to use
+     Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="umkc.ase.caretracker.LoginActivity"
+            android:label="Login" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="umkc.ase.caretracker.RegisterActivity"
+            android:label="Register" >
+        </activity>
+        <activity
+            android:name="umkc.ase.caretracker.HomeActivity"
+            android:label="User Home" >
+        </activity>
+        <activity
+            android:name="umkc.ase.caretracker.TrackerMapActivity"
+            android:label="Tracker Map" >
+        </activity>
+        <activity
+            android:name="umkc.ase.caretracker.SetBoundaryActivity"
+            android:label="Set Boundary" >
+        </activity>
+        <activity
+            android:name="umkc.ase.caretracker.GetBoundaryActivity"
+            android:label="Get Boundary" >
+        </activity>
+        
+         <activity
+            android:name="umkc.ase.caretracker.FeedbackActivity"
+            android:label="Feedback" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyADPXnQ1j4OQZNAZF65RpvLyCVR8iWFqNA" />
+
+        <uses-library
+            android:name="com.google.android.maps"
+            android:required="true" />
+    </application>
+
+</manifest>
